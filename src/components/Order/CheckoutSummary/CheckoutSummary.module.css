@@ -1,0 +1,25 @@
+.CheckoutSummary {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.Link {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    color: #5C9210;
+    text-decoration: none;
+}
+
+@media (min-width: 600px) {
+    .CheckoutSummary {
+        width: 500px;
+    }
+}

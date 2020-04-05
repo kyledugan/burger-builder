@@ -1,0 +1,11 @@
+/* .Layout {
+    display: inline-block;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .Layout {
+        display: flex;
+        flex-direction: row;
+    }
+} */

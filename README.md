@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project avilable at [burger-builder-kd.s3-website.us-east-2.amazonaws.com](http://burger-builder-kd.s3-website.us-east-2.amazonaws.com).
+
+Final project for [React course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/). 
 
 ## Available Scripts
 
