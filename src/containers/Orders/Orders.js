@@ -5,6 +5,7 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../store/orders/ordersActions';
 import { connect } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import moment from 'moment';
 
 const Orders = props => {
     const { onGetOrders, token, userId } = props;
@@ -13,17 +14,26 @@ const Orders = props => {
         onGetOrders(token, userId);
     }, [onGetOrders, token, userId]) 
 
+    const sortOrders = (a,b) => {
+        return Date.parse(b.time) - Date.parse(a.time)
+    }
+
+    let sortedOrders = [];
+    if (props.orders.length) {
+        sortedOrders = props.orders.sort(sortOrders)
+    }
+
     let orders = <Spinner />;
     if (!props.loading) {
         orders = (
             <div>
-                {props.orders.map(order => {
+                {sortedOrders.map(order => {
                     return (
                         <Order 
                             key={order.id}
                             ingredients={order.ingredients}
                             price={order.price}
-                            time={order.time} />
+                            time={moment(order.time).format('MMMM Do YYYY, h:mm a')} />
                     );
                 })}
             </div>
